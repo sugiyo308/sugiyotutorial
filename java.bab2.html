@@ -1,0 +1,699 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial JavaScript Bab 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="class">
+        <h1>Daftar Lembaga Ketunanetraan dan Sekolah Inklusi di Indonesia</h1>
+    </header>
+    
+    <nav class="nav-primary"></nav>
+    <ul>
+        <li><a href="index.html" title="Beranda">Beranda</a></li>
+    <li><a href="jakpus.html">Provinsi DKI Jakarta</a></li>
+    </ul>
+
+    <header>
+    <h1>Tutorial JavaScript</h1>
+</header>        
+<nav>
+    <ul>
+    <li><a href="java.bab1.html">Pengenalan JavaScript</a></li>
+    <li><a href="java.bab2.html">Menjalankan Code Program JavaScript</a></li>
+    </ul>
+
+
+    </nav>
+
+    <main class="class">
+    <h2>Menjalankan Script Program JavaScript</h2>
+
+    <p>
+        Dalam bab ini kita akan mempelajari cara menjalankan kode program JavaScript. Dimulai dari mempersiapkan aplikasi teks editor dan web browser, membahas 3 metode input JavaScript, mengenal tab console dari web developer tools, hingga menampilkan pesan untuk web browser yang tidak mendukung JavaScript.
+
+
+    </p>
+
+    <h2>Text Editor dan Web Browser</h2>
+
+    <p>
+        Sama seperti HTML, aplikasi yang dibutuhkan untuk menulis dan menjalankan kode JavaScript hanya 2, yakni text editor dan web browser. Saya yakin kedua aplikasi ini sudah tersedia di komputer anda (karena syarat utama sebelum mempelajari JavaScript, sudah pernah membuat kode HTML). 
+    </p>
+
+    <p>
+        Untuk editor, di dalam buku ini akan digunakan visual studio code, namun begitu jika Anda lebih nyaman menggunakan editor yang lain tidak akan bermasalah. Sedang untuk browser,  di sini akan digunakan Google Chrome. 
+    </p>
+
+    <h2>Menyeting Screen Reader</h2>
+
+    <p>
+        Ada banyak screen reader yang digunakan untuk menjalankan komputer oleh tunanetra. Di dalam buku ini hanya akan digunakan NVDA. Ini semata-mata karena hingga JAWS 2019 masih belum kompatibel dengan Visual Studio Code.
+    </p>
+
+    <p>
+        NVDA mempunyai dua setelan yaitu laptop dan desktop. Untuk memudahkan,dalam  buku ini akan kita sragamkan menggunakan laptop. Karena itu mari kita ubah dulu setelan screen reader kita menjadi setelan laptop. Selain menggunakan setelan laptop,  kita juga harus menyeting agar NVDA membaca indentasi. Karena indentasi akan menentukan rapi tidaknya script yang kita tulis.
+    </p>
+
+    <h2>Menyeting NVDA menjadi setingan laptop</h2>
+<ul>
+<li>Tekan tombol insert+huruf n.</li>
+<li>Tekan panah bawah/atas cari preferences, tekan enter.</li>
+<li>"Tekan panah bawah/atas cari setting, tekan enter. Biasanya posisi kursor akan secara otomatis berada di setting.</li>
+<li>"Tekan panah bawah/atas  cari keyboard.</li>
+<li>"Tekan tab sekali, pastikan di sini komputer menyebutkan kata laptop, jika tidak tekan panah bawah sampai komputer menyebutkan kata: laptop.</li>
+<li>"Tekan tab sekali lagi, pastikan komputer mengatakan: select caps locks as modifier key check box check. jika tidak chheck, tekan sepasi untuk mengubahnya menjadi check.</oi>
+<li>"Selanjutnya tekan tab sampai ketemu tombol OK, tekan enter. Seckarang tombol insert untuk menyeting NVDA bisa diganti dengan tombol caps lock.</li>
+<li>"Tekan caps lock + huruf n, tekan panah atas sampai komputer mengatakan: save conviguration, tekan enter untuk menyimpan hasil setingan.</li>
+</ul>
+
+<h2>Menyeting NVDA agar membaca indentasi</h2>
+
+<ul>
+<li>Tekan caps lock + n.</li>
+<li>"Tekan panah bawah/atas cari preferences, tekan enter.</li>
+<li>Tekan panah bawah /atas cari setting, tekan enter. Biasanya kursor secara otomatis akan berada pada pilihan setting ketika kita menekan enter.</li>
+<li>Tekan panah bawah sampai ketemu document formatting.</li>
+<li>Tekan tab beberapa kali sampai ketemu line indentation reporting.</li>
+<li>"Tekan panah bawah/atas sampai ketemu speech, tekan enter.</li>
+</ul>
+    <p>
+        Keterangan: setingan ini sebaiknya tidak usah disimpan, karena settingan seperti ini jika kita bukan sedang menulis program justru mengganggu. Hanya, setiap kali Anda akan menggunakan Visual Studio Code harus menyeting lagi.
+    </p>
+
+    <h2>Membuat Script Hello World dari JavaScript</h2>
+
+    <p>
+        Setelah aplikasi text editor dan web browser tersedia serta NVDA sudah di ubah setelannya menjadi laptop, saatnya mencoba membuat teks “Hello World” dengan JavaScript. Membuat teks “Hello World” bisa dibilang sebagai sebuah ‘ritual’ yang hampir selalu dilakukan saat mempelajari bahasa pemrograman baru. 
+    </p>
+
+    <p>
+        Sekedar pengetahuan, kebiasaan “Hello World” berawal sejak tahun 1972 oleh Brian Kernighan, seorang ilmuwan komputer yang bekerja di Bell Labs. Hal ini tertulis di dalam buku “The C Programming Language” karya Brian Kernighan dan Dennis Ritchie di tahun 1978. Karya ini dinobatkan sebagai buku terbaik dan paling berpengaruh dalam perkembangan bahasa pemrograman komputer. Mari kita coba sekarang membuat script hello world.
+    </p>
+
+    <script src="langkah1.js"></script>
+
+    <p>
+        &#60;!DOCTYPE html&#62
+        <br>&#60;html lang="en&#62
+        <br>&#60;head&#62
+        <br>&#160;&#160;&#160;&#160;&#60;meta charset="UTF-8"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;title&#62contoh JavaScript&#60;/title&#62;
+        <br>&#60;/head&#62;
+        <br>&#60;body&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;h1&#62;Belajar JavaScript&#60;/h1&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;script&#62;
+        <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;document.write("Hello World")
+        <br>&#160;&#160;&#160;&#160;&#60;/script&#62;
+        <br>&#60;/body&#62
+        <br>&#60;/html&#62
+    </p>
+    
+    <h2>Menyimpan Script Dengan Visual Studio Code</h2>
+
+    <script src="langkah2.js"></script>
+
+    <h2>Menampilkan Hasil Script ke dalam web browser</h2>
+
+    <p>
+        Sekarang saatnya kita melihat hasil tampilan script yang kita buat dari dalam web browser. Caranya:
+    </p>
+
+    <script src="langkah3.js"></script>
+
+    <p>
+        Keterangan: 
+    </p>
+
+    <ol>
+        <li>Jika screen reader tidak secara otomatis membacakan alert atau peringatan yang muncul kita bisa menekan cap-lock+shift+ panah kiri. </li>
+        <li>Dalam penjelasan di atas terdapat perintah shift+f10, perintah ini sebetulnya terjemahan dari click kanan. Di dalam buku ini selanjutnya akan digunakan istilah click kanan bukan shift+f10. Selain dengan shift+f10 kita juga  bisa menekan tombol aplikasi pada keyboard. Tapi beberapa komputer tidak menyediakan tombol tersebut.</li>
+    </ol>
+
+    <p>
+        Mari kita bahas beberapa aspek dari kode program di atas.
+    </p>
+
+    <ol>
+        <li>90% kode program terdiri dari html, yakni tag &#60;head&#62;, &#60;meta&#62;, &#60;title&#62;, &#60;body&#62;, dan &#60;h1&#62;. Kode JavaScript sendiri disisipkan ke dalam tag &#60;script&#62;.</li>
+        <li>satu-satunya perintah JavaScript yang kita jalankan adalah document.write("Hello world");. Kode ini berfungsi menampilkan teks "Hello World". Perintah document.write() merupakan sebuah function di dalam JavaScript. Anda bisa mengubah kode tersebut menjadi document.write("Selamat Siang");, dan akan tampil tulisan teks “Selamat Siang”.</li>
+        <li>jika diperhatikan nama file tetap menggunakan extensi .html, yakni helloworld.html. Sama seperti CSS, apabila kode JavaScript disisipkan ke dalam HTML, kita tetap menyimpannya sebagai *.html. Terkecuali jika kode JavaScript ini berada di sebuah file khusus (external JavaScript) maka akhiran filenya adalah *.js. Ini akan kita pelajari sesaat lagi.</li>
+    </ol>
+
+    <h2>Menjalankan File HTML dengan Live Server</h2>
+
+    <p>
+        Dengan live server akan memudahkan kita dalam menampilkan script html yang kita buat. Tapi sebelumnya kita harus menginstal live server terlebih dahulu. Caranya:
+    </p>
+
+    <ul>
+        <li>Pastikan komputer Anda terkoneksi dengan jaringan internet.</li>
+        <li>buka program Visual Studio Code.</li>
+        <li>tekan CTRL + Shift + x.</li>
+        <li>ketik 'live server', lalu tekan enter.</li>
+        <li>tekan tab sekali, lalu tekan panah atas/bawah untuk mencari 'live server'. (biasanya hasil pencarian paling atas).</li>
+        <li>Setelah ketemu, tekan enter lalu tab sekali untuk menuju tombol install.</li>
+        <li>tekan enter lalu proses instalasi akan berjalan.</li>
+        <li>tunggu beberapa detik sampai ada notifikasi 'live server has been installed'.</li>
+        <li>restart VISUAL STUDIO CODE.</li>
+    </ul>
+
+    <p>
+        Setelah live server terinstal, untuk menampilkan JavaScript dalam web browser caranya:
+-	Buka Visual Studio Code.
+
+    </p>
+
+    <ul>
+        <li>tekan alt + f, lalu  pilih “open folder”. Akan muncul kotak dialog open folder.</li>
+        <li>Tekan tab beberapa kali sampai ketemu tree view.</li>
+        <li>Tekan panahh bawah atau atas cari drive tempat folder kita berada. Sebagai contoh saya membuat folder bernama belajar_javascript di dalam drive d, maka cari drive d dan tekan panah kanan.</li>
+        <li>Tekan panah bawah atau atas cari folder dimaksud. Dalam contoh saya tadi folder itu bernama belajar_javascript, maka cari folder tersebut, lalu tekan enter.</li>
+        <li>tekan shift+tab sampai ketemu select folder button, tekan sepasi.</li>
+        <li>Setelah melalui langkah-langkah di atas, buka file JavaScript yang ingin ditampilkan ke dalam web browser dari Visual Studio Code.</li>
+        <li>Tekan Alt + l + o. maka file JavaScript akan ditampilkan dari web broser.</li>
+        <li>Live server akan terus aktif sekalipun komputer pernah dimatikan, karena itu untuk mematikannya, tekan Alt + L + C.</li>
+    </ul>
+
+    <h2>Cara Menginput JavaScript ke dalam HTML</h2>
+
+    <p>
+        Contoh praktek “Hello World” yang kita jalankan sebelumnya, JavaScript ditempatkan langsung di dalam kode HTML, atau dikenal sebagai Internal JavaScript. Selain cara tersebut, terdapat 2 metode lain untuk menginput kode JavaScript, yakni: Inline dan External. Mari kita bahas.
+    </p>
+
+    <h2>Inline JavaScript</h2>
+
+    <p>
+        Inline JavaScript artinya kode JavaScript ditempatkan secara langsung di dalam atribut tag HTML. Berikut contoh dari inline JavaScript:
+    </p>
+
+    <p>
+        &#60;!DOCTYPE html&#62
+        <br>&#60;html lang="en&#62
+        <br>&#60;head&#62
+        <br>&#160;&#160;&#160;&#160;&#60;meta charset="UTF-8"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;title&#62contoh JavaScript&#60;/title&#62;
+        <br>&#60;/head&#62;
+        <br>&#60;body&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;h1&#62;Belajar JavaScript&#60;/h1&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;button onclick="alert('Sedang Belajar JavaScript');"&#62;
+        <br>&#160;&#160;&#160;&#160;Click me!
+    <br>&#160;&#160;&#160;&#160;&#60;/button&#62;
+        <br>&#60;/body&#62
+        <br>&#60;/html&#62
+    </p>
+
+    <p>
+        Disini saya memiliki sebuah tag &#60;button&#62;&#60/button&#62; yang digunakan untuk membuat tombol. Perhatikan terdapat atribut onclick="alert('Sedang Belajar JavaScript');”, ini adalah kode JavaScript.
+    </p>
+
+    <p>
+        Onclick merupakan atribut khusus yang dikenal sebagai event. Event nantinya akan kita bahas dalam bab tersendiri. Namun sebagai gambaran, onclick berfungsi untuk menjalankan kode JavaScript hanya pada saat tombol tersebut di-click. Hampir semua element HTML bisa ditambahkan atribut event seperti ini. 
+    </p>
+
+    <p>
+        Silahkan anda jalankan kode program diatas, kemudian klik tombol Click me!.
+    </p>
+
+    <p>
+        Metode inline JavaScript sangat praktis, namun memiliki beberapa kelemahan:
+    </p>
+
+    <ol>
+        <li>Kode JavaScript “bercampur” dengan HTML. Akan memakan waktu lama untuk mencari kode seperti ini diantara ratusan baris HTML.</li>
+        <li>Kode JavaScript hanya bisa ditulis dalam 1 baris, sehingga tidak cocok untuk kode yang panjang.</li>
+        <li>Kode JavaScript tidak bisa digunakan di tempat lain (code reuse). Misalnya jika saya memiliki 5 halaman, terpaksa dalam setiap halaman ditulis kode JavaScript yang sama berulang kali.</li>
+    </ol>
+
+    <p>
+        Karena bisa ditulis secara instant dan singkat, anda akan sering menemukan inline JavaScript dalam artikel atau tutorial di internet. Untuk web yang sebenarnya, external JavaScript lebih disarankan (akan kita bahas sesaat lagi).
+    </p>
+
+    <h2>Internal JavaScript</h2>
+
+    <p>
+        Metode internal JavaScript sudah kita coba pada saat membuat program Hello World. Disini kode JavaScript ditulis di dalam tag &#60;script&#62;. Tag &#60;script&#62; merupakan tag khusus untuk menginput kode script, dimana salah satunya kode script itu adalah JavaScript.
+    </p>
+
+    <p>
+        Sebelum era HTML5 seperti saat ini, penulisan tag &#60;script&#62; ditambahkan atribut language atau type, seperti contoh berikut:
+    </p>
+
+    <p>
+        &#60;script type="text/javascript"&#62;
+        <br> //.. kode javascript disini
+        <br>&#60;/script&#62;
+    </p>
+
+
+<p>
+    <br>&#60;script language="javascript"&#62;
+        <br>//.. kode javascript disini
+        <br>&#60;/script&#62;
+
+    <p>
+        <br><br>
+        &#60;script type="text/javascript" language="javascript"&#62;
+        <br>//.. kode javascript disini
+        &#60;/script&#62;
+    </p>
+    
+    <p>
+        Sekarang, ketiga cara penulisan diatas tidak lagi direkomendasikan. Kita cukup menulis tag &#60;script&#62; tanpa atribut apapun. Seperti Contoh berikut:
+    </p>
+
+    <p>
+        &#60;script&#62;
+        <br>//.. kode JavaScript disini
+        <br>&#60;/script&#62;
+    </p>
+
+    <p>
+        Atribut type dan language merupakan ‘warisan’ dari era browser war. Ketika itu kode script yang tersedia tidak hanya JavaScript saja, juga ada JScript dan VBScript. Saat ini semua web browser menjadikan JavaScript sebagai bahasa default, sehingga atribut type dan language tidak perlu ditulis.
+    </p>
+
+    <p>
+        Pembahasan yang menarik adalah, dimanakah sebaiknya kode JavaScript ini diletakkan? Apakah di bagian <head>, di tengah tag <body>, atau di akhir? Lokasi penempatan ini dipengaruhi oleh 2 aspek: performa dan eksekusi.
+    </p>
+
+    <p>
+        Biasanya, kode JavaScript ditempatkan di bagian atas, yakni di dalam tag &#60;head&#62;, seperti contoh berikut:
+    </p>
+
+    <p>
+        &#60;!DOCTYPE html&#62
+        <br>&#60;html lang="en&#62
+        <br>&#60;head&#62
+        <br>&#160;&#160;&#160;&#160;&#60;meta charset="UTF-8"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;title&#62contoh JavaScript&#60;/title&#62;
+        <br>&#160;&#160;&#160;&#160;&#60script&#62;
+        <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// kode javascript di sini
+        <br>&#160;&#160;&#160;&#160;&#60;/script&#62;
+
+        <br>&#60;/head&#62;
+        <br>&#60;body&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;h1&#62;Belajar JavaScript&#60;/h1&#62;
+        <p>
+            <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;button&#62;Click me! &#60;/button&#62;
+        </p>
+        <br>&#60;/body&#62
+        <br>&#60;/html&#62
+    </p>
+
+    <p>
+        Menempatkan kode JavaScript di bagian atas seperti ini banyak ditemukan. Namun berkaitan dengan masalah performa, beberapa developer web menyarankan meletakkan JavaScript dibagian bawah tag <body>, yakni sebelum tag penutup </body>, sebagaimana yang dijelaskan dari sebuah artikel di Yahoo Developer Network: Best Practices for Speeding Up Your Web Site, seperti contoh berikut:
+</p>
+
+<p>
+    &#60;!DOCTYPE html&#62
+    <br>&#60;html lang="en&#62
+    <br>&#60;head&#62
+    <br>&#160;&#160;&#160;&#160;&#60;meta charset="UTF-8"&#62;
+    <br>&#160;&#160;&#160;&#160;&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+    <br>&#160;&#160;&#160;&#160;&#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+    <br>&#160;&#160;&#160;&#160;&#60;title&#62contoh JavaScript&#60;/title&#62;
+    <br>&#60;/head&#62;
+    <br>&#60;body&#62;
+    <br>&#160;&#160;&#160;&#160;&#60;h1&#62;Belajar JavaScript&#60;/h1&#62;
+<br>&#160;&#160;&#160;&#160;&#60;script&#62;
+<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// kode JavaScript di sini
+<br>&#160;&#160;&#160;&#160;&#60/script&#62;
+    <br>&#60;/body&#62
+    <br>&#60;/html&#62
+</p>
+
+    <p>
+        Untuk internal JavaScript, peningkatan performa tidak akan begitu terasa. Posisi JavaScript di bagian bawah seperti ini lebih ditujukan untuk external JavaScript. 
+    </p>
+
+    <h1>External JavaScript</h1>
+
+    <p>
+        Metode input JavaScript yang paling disarankan adalah external JavaScript. Disini kita membuat file khusus yang hanya berisi kode program JavaScript. File ini nantinya “dipanggil” oleh halaman HTML yang membutuhkan.
+    </p>
+
+    <p>
+        Sebagai contoh praktek, silahkan buat sebuah file baru yang isinya adalah sebagai berikut:
+    </p>
+
+    <p>
+        alert("Hello dari External JavaScript");
+    </p>
+
+    <p>
+        Ya, hanya satu baris saja kerena kita belum membahas kode JavaScript lain. Save file diatas dengan nama kodeku.js. Nama file ini tidak harus kodeku.js, anda bisa menggunakan nama lain selama memiliki extension *.js. Tapi untuk sementara, gunakan dulu nama kodeku.js.
+    </p>
+
+    <p>
+        Untuk memasukkan file JavaScript kodeku.js ke dalam HTML, kita menggunakan atribut src dari tag &#60;script&#62;. Silahkan buat file HTML dengan kode berikut:
+    </p>
+
+    <p>
+    &#60;!DOCTYPE html&#62
+    <br>&#60;html lang="en&#62
+    <br>&#60;head&#62
+    <br>&#160;&#160;&#160;&#160;&#60;meta charset="UTF-8"&#62;
+    <br>&#160;&#160;&#160;&#160;&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+    <br>&#160;&#160;&#160;&#160;&#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+    <br>&#160;&#160;&#160;&#160;&#60;title&#62contoh JavaScript&#60;/title&#62;
+    <br>&#60;/head&#62;
+    <br>&#60;body&#62;
+    <br>&#160;&#160;&#160;&#160;&#60;h1&#62;Belajar JavaScript&#60;/h1&#62;
+<br>&#160;&#160;&#160;&#160;&#60;script src="kodeku.js"&#62;&#60;/script&#62;    
+    <br>&#60;/body&#62
+    <br>&#60;/html&#62
+</p>
+
+    <p>
+        Mari kita jalankan:
+    </p>
+
+    <p>
+        Hasilnya sebuah jendela popup dengan teks "Hello dari External JavaScript". Ini artinya kode JavaScript yang berada di  kodeku.js telah berhasil dieksekusi.
+    </p>
+
+    <p>
+        Sama seperti atribut src pada tag <img>, file JavaScript juga bisa menggunakan alamat relatif maupun alamat absolute. Kita bisa saja menginput file JavaScript yang berada di server lain, seperti contoh berikut:
+    </p>
+
+    <p>
+        &#60;script src="https://code.jquery.com/jquery-3.1.0.js"&#62;&#60;/script&#62;
+    </p>
+
+    <p>
+        Teknik seperti ini sering digunakan untuk mengakses file JavaScript yang berada di CDN (Content Delivery Network).
+    </p>
+
+    <p>
+        Untuk menginput file JavaScript external, pasangan tag penutup </script> tetap harus ditulis walaupun diantara tag <script>  dan </script>  tidak berisi kode apapun. Kita tidak bisa menulis self closing tag seperti berikut:
+    </p>
+
+    <p>
+        Di antara tag &#60;script&#62; dan &#60;/script&#62; juga tidak boleh terdapat kode internal JavaScript lain:
+    </p>
+
+    <p>
+        &#60;script src="kodeku.js"&#62;
+        <br>alert("Ini tidak akan berjalan");
+        <br>&#60;/script&#62;
+    </p>
+
+    <p>
+        Jika butuh memanggil lebih dari 1 file JavaScript external, bisa dengan menulis tag &#60;script&#62; beberapa kali. Seperti contoh berikut:
+    </p>
+
+    <p>
+        <br>&#60;script src="kodeku1.js"&#62;&#60;/script&#62;
+<br>&#60;script src="kodeku2.js"&#62;&#60;/script&#62;
+<br>&#60;script src="kodeku3.js"&#62;&#60;/script&#62;
+    </p>
+
+    <p>
+        Yang perlu diperhatikan, file JavaScript ini di eksekusi secara berurutan mulai dari yang paling atas. File kodeku1.js di proses pertama kali, kemudian diikuti oleh kodeku2.js dan terakhir kodeku3.js. 
+    </p>
+
+    <p>
+        Kita perlu mengatur posisi file jika terdapat kode JavaScript yang bergantung kepada file lain. Misalkan anda membuat program yang memerlukan library jQuery, pemanggilan library ini harus ditulis paling awal. Kalau tidak, kode program tidak akan berjalan.
+    </p>
+
+    <p>
+        Dengan memisahkan kode program JavaScript ke dalam file khusus, kita bisa melakukan code reuse, yakni menggunakan 1 file JavaScript oleh banyak halaman HTML. Halaman tersebut cukup memanggil file ini menggunakan tag &#60;script&#62. 
+    </p>
+
+    <p>
+        Fitur cache dari web browser juga bisa mempercepat pengaksesan website dengan cara menyimpan file JavaScript di dalam cache. Ketika mengunjungi halaman HTML yang memiliki file JavaScript external, web browser akan mendownload file-file ini dan disimpan di cache. Saat pindah ke halaman lain yang menggunakan file external JavaScript, web browser cukup mengambilnya di cache, tidak perlu mendownload ulang seluruh file ini (selama file external JavaScript tersebut sama persis).    
+    </p>
+    <p>
+        Dibalik keunggulannya, external JavaScript juga memiliki satu kendala. Spesifikasi protocol HTTP/1.1 menyatakan bahwa web browser harus berhenti memproses HTML pada saat mendownload file external JavaScript. Situasinya mirip seperti menulis fungsi alert() di bagian <head>. Sebagaimana yang telah kita lihat, fungsi  alert()  akan menahan web browser untuk memproses kode HTML sampai tombol OK di klik.
+    </p>
+
+    <p>
+        Sebagai contoh, misalkan saya memiliki kode HTML berikut:
+    </p>
+
+    <p>
+        &#60;!DOCTYPE html&#62
+        <br>&#60;html lang="en&#62
+        <br>&#60;head&#62
+        <br>&#160;&#160;&#160;&#160;&#60;meta charset="UTF-8"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;title&#62contoh JavaScript&#60;/title&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;script src="kodeku1.js"&#62;&#60;/script&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;script src="kodeku2.js"&#62;&#60;/script&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;script src="kodeku3.js"&#62;&#60;/script&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;script src="kodeku4.js"&#62;&#60;/script&#62;
+        <br>&#60;/head&#62;
+        <br>&#60;body&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;h1&#62;Belajar JavaScript&#60;/h1&#62;
+        
+        <br>&#60;/body&#62
+        <br>&#60;/html&#62
+    </p>
+    <p>
+        Kode program akan diproses secara berurutan dari baris paling atas ke bawah. Pertama kali web browser akan memproses kode HTML baris 1-4, kemudian masuk ke tag &#60;script&#62; di baris ke 5. Disini web browser berhenti sesaat untuk mendownload file kodeku1.js. Selama proses download ini, web browser dipaksa berhenti dan tidak bisa melakukan proses apapun. 
+    </p>
+
+    <p>
+        Setelah kodeku1.js selesai di download, isinya akan segera di jalankan, kemudian lanjut ke baris 6 untuk mendownload kodeku2.js, kembali berhenti sesaat, dan demikian seterusnya hingga akhir kode program di baris 12.    
+    </p>
+
+    <p>
+        Untuk website yang kompleks, file external JavaScript bukan hanya 4, tapi bisa 10 file atau lebih. Jika seluruh file ini diletakkan di bagian <head>, bisa saja halaman web tampil “kosong” selama beberapa detik menunggu web browser selesai mendownload file-file tersebut. Situasi ini dikenal dengan istilah Render-Blocking JavaScript.    
+    </p>
+
+    <p>
+        Solusi dari masalah ini adalah dengan memanggil file external JavaScript dari bagian bawah tag &#60;body&#62. Dengan  demikian, kita memberi kesempatan web browser untuk memproses kode HTML terlebih dahulu, baru kemudian mendownload file JavaScript. Efeknya, pengujung web bisa langsung melihat tampilan web selama proses ini, tidak hanya halaman kosong.
+    </p>
+
+    <p>
+        External JavaScript merupakan metode input yang paling disarankan. Tapi seperti yang sudah kita coba, butuh langkah tambahan untuk membuat file khusus JavaScript. Agar lebih sederhana, sebagian besar contoh kode program dalam buku ini akan menggunakan internal JavaScript. 
+    </p>
+
+    <p>
+        External JavaScript hanya akan digunakan pada studi kasus yang cukup rumit atau terdapat lebih dari 1 halaman HTML yang butuh JavaScript. Sekali lagi, ini semata-mata hanya untuk mempersingkat penulisan.
+    </p>
+
+    <h2>Web Developer Tools</h2>
+
+    <p>
+        Berbeda dengan mayoritas bahasa pemrograman lain, secara default kita tidak bisa melihat pesan error dari JavaScript. Padahal ini sangat penting selama pembuatan kode program. Tidak ada yang lebih membuat pusing dari program yang tidak berjalan, namun tidak tahu salahnya dimana.
+    </p>
+
+    <p>
+        Untuk menampilkan pesan error JavaScript, kita bisa menggunakan menu Web developer tools bawaan web browser. Setiap web browser modern memiliki tools seperti ini. Cara paling cepat dengan menekan kombinasi tombol CRTL + SHIFT I. 
+    </p>
+
+    <p>
+        Bagi para tunanetra, hingga saat ini hanya Google Chrome yang Web developer tools-nya mudah diakses dengan screen reader.
+    </p>
+
+    <p>
+        Jendela Web developer tools sangat berguna dalam proses pembuatan web, tidak hanya untuk JavaScript saja tapi juga untuk merancang kode HTML dan CSS. Disini terdapat beberapa tab, seperti Inspector, Console, Debugger, dll. Tab yang akan sering kita akses adalah Inspector dan Console.
+    </p>
+
+    <p>
+        Tab Inspectorbisa digunakan untuk menelusuri seluruh kode HTML yang terdapat di dalam halaman web. 
+    </p>
+
+    <p>
+        Tab yang sering kita akses selama membuat kode program JavaScript adalah tab Console. 
+    </p>
+
+    <p>
+        Tab Console digunakan untuk menampilkan pesan error JavaScript (apabila ada). 
+    </p>
+
+    <p>
+        Mari coba kita mencoba script yang secara sengaja kita buat error. silahkan ketik kode program berikut:
+    </p>
+
+    <p>
+        &#60;!DOCTYPE html&#62
+        <br>&#60;html lang="en&#62
+        <br>&#60;head&#62
+        <br>&#160;&#160;&#160;&#160;&#60;meta charset="UTF-8"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;title&#62contoh JavaScript&#60;/title&#62;
+        <br>&#60;/head&#62;
+        <br>&#60;body&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;h1&#62;Belajar JavaScript&#60;/h1&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;script&#62;
+        <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;alert("Hello World);
+            <br>&#160;&#160;&#160;&#160;&#60;/script&#62;
+            
+        <br>&#60;/body&#62
+        <br>&#60;/html&#62
+    </p>
+
+    <p>
+        Mari kita jalankan kode program diatas dengan google crome. Seperti biasa, web browser tidak menampilkan pesan error apapun. Tapi kita sadar bahwa ada sesuatu yang salah karena jendela popup “Hello World” tidak tampil. 
+    </p>
+
+    <h2>Mengakses tab Console dari Web Developer Tools Dengan Screen reader</h2>
+
+    <p>
+        Bagi Pengguna screen reader bisa mengakses tab Console dari Web Developer Tools dengan cara melakukan langkah-langkah seperti berikut.
+    </p>
+
+    <ul>
+        <li>Jalankan script di atas dengan Google Crome.</li>
+        <li>Tekan shift+ctrl+i.</li>
+        <li>Tekan ctrl + `. Tombol ` biasanya berada di sebelah kiri angka1.</li>
+        <li>Tekan tombol caps lock + sepasi 2 kali. Cara menekannya tekan tombol caps lock (tahan), lalu sepasi ditekan 2 kali.</li>
+        <li>Tekan shift+tab sekali.</li>
+        <li>Baca dengan panah bawah/atas.</li>
+    </ul>
+
+    <p>
+        Tampak satu baris kalimat: SyntaxError: unterminated string literal. Inilah pesan kesalahan dari kode program kita. Saya lupa menutup string “Hello World” dengan tanda kutip. Setelah selesai membaca pesan error, tekan shift+ctrl+i untuk kembali di tampilan biasa.
+    </p>
+
+    <p>
+        Pesan error seperti ini sangat berguna. Apabila kode yang anda buat tidak berjalan sebagaimana mestinya, hal pertama yang harus dilakukan adalah memeriksa tab Console ini.
+    </p>
+
+    <h2>Function console.log()</h2>
+
+    <p>
+        Metode yang paling cepat untuk menampilkan hasil code JavaScript adalah dengan fungsi alert(), sebagaimana yang telah kita gunakan sejauh ini.
+    </p>
+
+    <p>
+        Meskipun cepat, fungsi alert() hanya bisa menampilkan 1 output pada setiap pemanggilan. Selain itu fungsi ini juga men-block eksekusi JavaScript sampai tombol OK di klik.
+    </p>
+
+    <p>
+        Alternatif lain yang lebih rapi dan elegan adalah menggunakan fungsi console.log(). Fungsi ini berguna untuk menampilkan hasil kode program ke tab Console. 
+    </p>
+
+    <p>
+        Mari kita coba, silahkan jalankan kode program berikut ini:
+    </p>
+
+    <p>
+        &#60;!DOCTYPE html&#62
+        <br>&#60;html lang="en&#62
+        <br>&#60;head&#62
+        <br>&#160;&#160;&#160;&#160;&#60;meta charset="UTF-8"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;title&#62contoh JavaScript&#60;/title&#62;
+        <br>&#60;/head&#62;
+        <br>&#60;body&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;h1&#62;Belajar JavaScript&#60;/h1&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;script&#62;
+        <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;console.log("Selamat Pagi.");
+        <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;console.log("Sedang belajar JavaScript.");
+        <br>&#160;&#160;&#160;&#160;&#60;/script&#62
+                
+        <br>&#60;/body&#62
+        <br>&#60;/html&#62
+    </p>
+    
+    <p>
+        Selanjutnya lakukan langkah-langkah berikut untuk menampilkan  hasil console.log.
+    </p>
+
+    <ul>
+        <li>Jalankan program di atas dengan Google Chrome.</li>
+        <li>Tekan shift+ctrl+i.</li>
+        <li>Tekan ctrl + `.</li>
+        <li>Tekan caps lock + sepasi 2 kali.</li>
+        <li>Tekan shift+tab.</li>
+        <li>Baca dengan panah bawah/atas. Jika menemukan keterangan tree view dari scxreen reader tekan panah kanan untuk membukanya</li>
+        <li>Tekan shift+ctrl+i untuk keluar dari console.
+    </ul>
+
+    <p>
+        Disini, saya menampilkan 4 buah perintah dengan fungsi  console.log(). Jauh lebih elegan dibandingkan fungsi alert(). Tapi perlu diingat, fungsi ini tidak akan menampilkan apa-apa ke dalam halaman web. Kita hanya bisa melihatnya dari tab Console. 
+    </p>
+
+    <p>
+        Sepanjang pembahasan dalam bab-bab berikutnya, saya akan banyak menggunakan fungsi console.log() ini. Setidaknya sampai kita masuk ke pembahasan tentang DOM (Document Object Model).
+    </p>
+
+    <h2>Menampilkan console.log tanpa script HTML</h2>
+
+    <p>
+        Jika yang kita lakukan hanya ingin menguji apakah script jalan atau tidak, kita bisa menjalankan program JavaScript tanpa melalui program web browser. Syaratnya komputer Anda telah diinstal program node dan Anda menggunakan Visual Studio Code sebagai program editor browser-nya. Cari program node di internet lalu coba lakukan percobaan berikut.
+    </p>
+
+    <p>
+        Pertama-tama coba ketik script berikut di dalam visual studio code Anda.
+    </p>
+
+    <p>
+        console.log("Selamat pagi");
+        <br>console.log("Senang Belajar JavaScript");
+    </p>
+
+    <p>
+        Selanjutnya lakukan hal-hal berikut untuk menampilkan script di atas.
+    </p>
+
+    <ol>
+        <li>Simpan script di atas ke dalam folder yang sudah kita persiapkan dengan ekstensi js. Di sini saya menggunakan kata kumpulanjavascript sebagai nama folder dan script1 sebagai nama file.</li>
+        <li>Aktifkan folder yang digunakan untuk menyimpan file tersebut.</li>
+        <li>Tekan ctrl+ `. </li>
+        <li>Ketik node script1.js tekan enter. Komputer akan segera membacakan apa yang kita tuliskan dalam console.log.</li>
+    </ol>
+        
+<h2>Fungsi document.write();</h2>    
+
+    <p>
+Di atas kita telah menampilkan hasil JavaScript dengan alert dan dengan console.log();. Selain dengan kedua cara di atas, sebetulnya masih ada satu cara lagi yaitu dengan document.write();. Kelebihan dari fungsi document.write(); adalah lebih mudah dibaca oleh screent reader. Namun, ada beberapa script JavaScript yang tidak bisa ditampilkan dengan document.write. Karena itu di dalam buku ini selanjutnya akan digunakan fungsi document.write(); untuk menampilkan hasil script JavaScript sejauh bisa ditampilkan dengan fungsi tersebut. Untuk script yang tidak bisa ditampilkan document.write(); akan digampilkan menggunakan console.log();. Berikut adalah contoh menampilkan script JavaScript yang ditampilkan dengan document.write();.
+    </p>
+    
+    <p>
+        &#60;!DOCTYPE html&#62
+        <br>&#60;html lang="en&#62
+        <br>&#60;head&#62
+        <br>&#160;&#160;&#160;&#160;&#60;meta charset="UTF-8"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;title&#62contoh JavaScript&#60;/title&#62;
+        <br>&#60;/head&#62;
+        <br>&#60;body&#62;
+        <br>&#160;&#160;&#160;&#160;&#60;h1&#62;Belajar JavaScript&#60;/h1&#62;
+        
+        <br>&#60;/body&#62
+        <br>&#60;/html&#62
+    </p>
+    
+    <p>
+        &#60;script&#62
+            <br>document.write("Selamat Pagi..." + "<br>");
+            document.write(99*4+121 + "<br>");
+            document.write("Sedang belajar pemrograman" + "<br>");
+            &#60/script&#62
+        </p>
+        
+<button id="tombol">Cetak Halaman</button>
+<script>
+var tombolNode = document.getElementById("tombol");
+
+tombolNode.addEventListener("click",function () {
+  window.print();
+});
+</script>
+</main>
+
+<footer class="footer">
+    <p>2020 &#169; Copy Right Sugiyo</p>
+  </footer>
+  
+  
+</body>
+</html>
